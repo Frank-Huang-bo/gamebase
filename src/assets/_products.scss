@@ -1,0 +1,30 @@
+.product-pagination.pagination {
+    // border-radius: 0;
+    // display: flex;
+    // border-radius: .25rem;
+
+    .page-item {
+
+        // &.active .page-link{
+        //     color: white;
+        //     background: $color-primary;
+        // }
+
+        .page-link {
+            color: white;
+            border-radius: 0;
+            background: $color-dark;
+            @include remove-bootstrap-btn-style;
+            // border-color: transparent;
+            padding: 10px;
+            // border-color: $color-secondary;
+            
+            font-size: 20px;
+
+            &:hover {
+                background: #3a79c8;
+            }
+
+        }
+    }
+}

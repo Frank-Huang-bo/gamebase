@@ -1,0 +1,22 @@
+.custom-breadcrumb {
+    background: #444444;
+    color: white;
+    border-radius: 0px;
+
+    .breadcrumb-item 
+    {
+        a {
+            color: white;
+        }
+
+        &.active {
+            color: white;
+        }
+
+        &:before {
+            color: white;
+        }
+    }
+
+
+}

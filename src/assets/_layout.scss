@@ -1,0 +1,211 @@
+$font-family: '-apple-system', 'Microsoft JhengHei', BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: $font-family;
+}
+
+// .container {
+//     width: 100%;
+//     margin: 0 auto;
+
+//     @include ipad() {
+//         max-width: 768px;
+//     }
+
+//     @include pc() {
+//         max-width: 1024px; 
+//     }
+// }
+
+.wrap {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: $color-primary;
+}
+
+main {
+    flex-grow: 1;
+}
+
+header, main, footer {
+    flex-shrink: 0;
+}
+
+.form-control {
+    border-radius: 0px;
+}
+
+.form-control:focus{
+    box-shadow:none;
+    border-width: 1px;
+    
+}
+
+.product {
+
+    margin-bottom: 30px;
+
+    .product-body {
+        background: url(https://cdn.images.express.co.uk/img/dynamic/143/590x/PS4-1011210.jpg?r=1535793391836);
+        @include bg-cover;
+        padding-bottom: 80%;
+        transition: opacity .5s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .product-info {
+        background: $color-dark;
+        color: white;
+        padding: 15px;
+
+        &-title {
+            color: white;
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            @include remove-link-style;
+
+            &:hover {
+                color: $color-secondary;
+                @include remove-link-style;
+            }
+
+        }
+
+        .product-price
+        {
+            .money {
+                color: #fbec02;
+                font-size: 26px;
+                margin-right: 20px;
+            }
+
+            .origin-money {
+                font-size: 17px;
+                text-decoration: line-through;
+            }
+        }
+    }
+}
+
+.add-to-cart-btn {
+    @include remove-bootstrap-btn-style;
+    background: $color-secondary;
+    color: white;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 18px;
+    transition: background .5s;
+    @include remove-link-style;
+
+    &:hover {
+        color: white;
+        background: #fe1032;
+    }
+
+    &:focus {
+        color: white;
+        background: #fe1032;
+    }
+}
+
+.sidebar
+{
+    .category-title {
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    .category-list {
+        font-size: 20px;
+
+        .category-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #777777;
+
+            a {
+                @include remove-link-style;
+                color: #777777;
+
+                &:hover { 
+                    @include remove-link-style;
+                    color: white;
+                }
+
+                &.active {
+                    @include remove-link-style;
+                    color: white;
+                }
+
+            }
+        }
+    }
+
+    @include ipad() {
+        .category-title {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.item-panel {
+    border: 1px solid #777777;
+
+    .item-panel-header
+    {
+        padding: 10px;
+        background: #777777;
+        color: white;
+        text-align: center;
+    }
+
+    .item-panel-body {
+        padding: 10px;
+        color: white;
+        border-bottom: 1px solid #777777;
+    }
+
+    .item-panel-footer {
+        padding: 20px;
+    }
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+
+
+.bg-header {
+    background-color: #444444;
+    border: 0px;
+    border-color: #444444;
+    
+
+    .bg-header:first-child {
+        border-radius: 0px;
+    }
+
+    .btn-link {
+        color: white;
+    }
+}
+
+.bg-body {
+    background-color: #777777;
+    
+    .table {
+        color: white;
+    }
+}
